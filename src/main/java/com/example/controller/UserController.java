@@ -21,7 +21,7 @@ public class UserController {
 	
 	@GetMapping("user")
 	public String getUser(){
-		System.out.println("in the controller  ---");
+		System.out.println("in the controller  ---====");
 		return userService.getUser();
 	}
 
