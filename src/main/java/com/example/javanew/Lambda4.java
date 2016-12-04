@@ -41,5 +41,15 @@ public class Lambda4 {
         boolean test = nonNull.test(true);
         System.out.println(test);
 
+
+        final int num = 1;
+        Converter<Integer, String> stringConverter =
+                (from) -> String.valueOf(from + num);
+        String convert = stringConverter.convert(2);// 3
+        System.out.println(convert);
+
+        Predicate<String> predicate = (s) -> s.length() > 0;
+        boolean testResult = predicate.test("foo");// true
+        System.out.println(testResult);
     }
 }
