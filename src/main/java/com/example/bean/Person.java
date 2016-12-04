@@ -1,4 +1,4 @@
-package com.example.Bean;
+package com.example.bean;
 
 /**
  * Created by Tory on 2016/12/3.
