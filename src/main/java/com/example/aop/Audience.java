@@ -1,8 +1,9 @@
-/**	______	    		
-   /__	__/__  ____     
- 	 / / / _ \/ __) _ `/
- 	/_/ ()___/_/  \_, /
- 				 /___/			
+/**
+ * ______
+ * /__	__/__  ____
+ * / / / _ \/ __) _ `/
+ * /_/ ()___/_/  \_, /
+ * /___/
  * 2016年12月3日 上午10:23:25
  */
 package com.example.aop;
@@ -15,12 +16,12 @@ import org.springframework.stereotype.Component;
 @Component
 public class Audience {
 
-	@Before("execution (** com.example.service.UserService.getUser(..))")
-	public void beforeAop(){
-		System.out.println("before aop");
-		System.out.println("before aop");
-		System.out.println("before aop");
-		System.out.println("before aop");
-		System.out.println("before aop");
-	}
+    @Before("execution (** com.example.service.UserService.getUser(..))")
+    public void beforeAop() {
+        System.out.println("before aop");
+        System.out.println("before aop");
+        System.out.println("before aop");
+        System.out.println("before aop");
+        System.out.println("before aop");
+    }
 }

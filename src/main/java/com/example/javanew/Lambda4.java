@@ -25,7 +25,7 @@ public class Lambda4 {
         };
     }
 
-    void predicate(){
+    void predicate() {
         Predicate<Boolean> nonNull = Objects::nonNull;
         nonNull.test(true);
     }
