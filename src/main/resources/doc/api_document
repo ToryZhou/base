@@ -1,0 +1,27 @@
+create or update user
+post
+http://127.0.0.1:8080/v1/users
+{
+    "id":"87f20e3e0ae04b1faac69d5710b4236b",
+	"name":"Tory9"
+}
+
+get all users
+get
+http://127.0.0.1:8080/v1/users
+
+get one user
+get
+http://127.0.0.1:8080/v1/users/87f20e3e0ae04b1faac69d5710b4236b
+
+delete one user
+delete
+http://127.0.0.1:8080/v1/users/672c9743ded24a54af8f1114ca24db26
+
+get all the logAudits
+get
+http://127.0.0.1:8080/v1/logauditrecords
+
+get the logAudits by entity id
+get
+http://127.0.0.1:8080/v1/logauditrecords/e915cc8d46e34bedbead8b4828dcbb48

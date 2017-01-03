@@ -1,0 +1,46 @@
+var params = {
+    TableName: 'log_audit',
+    KeySchema: [
+        {
+            AttributeName: 'log_audit_id',
+            KeyType: 'HASH',
+        },
+    ],
+    AttributeDefinitions: [
+        {
+            AttributeName: 'log_audit_id',
+            AttributeType: 'S',
+        },
+        {
+            AttributeName: 'log_audit_entity_id',
+            AttributeType: 'S',
+        },
+    ],
+    ProvisionedThroughput: {
+        ReadCapacityUnits: 1,
+        WriteCapacityUnits: 1,
+    },
+    GlobalSecondaryIndexes: [
+        {
+            IndexName: 'log_audit_entity_id',
+            KeySchema: [
+                {
+                    AttributeName: 'log_audit_entity_id',
+                    KeyType: 'HASH',
+                },
+            ],
+            Projection: {
+                ProjectionType: 'ALL',
+            },
+            ProvisionedThroughput: {
+                ReadCapacityUnits: 1,
+                WriteCapacityUnits: 1,
+            },
+        },
+    ],
+};
+dynamodb.createTable(params, function(err, data) {
+    if (err) ppJson(err);
+    else ppJson(data);
+
+});
